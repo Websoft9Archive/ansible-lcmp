@@ -4,7 +4,7 @@
 
 服务器相关故障的诊断和解决，与云平台密切相关，请参考[云平台文档](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
 
-我们收集使用 LAMP 过程中最常见的故障，供您参考：
+我们收集使用 LCMP 过程中最常见的故障，供您参考：
 
 #### 网站显示重定向错误？
 
@@ -40,7 +40,7 @@ binlog主要用于出现没有备份的情况下，恢复数据库。但binlog�
   systemctl restart mysqld
   ~~~
 
-#### 重启 Apache 服务显示 *No spaces...*
+#### 重启 Caddy 服务显示 *No spaces...*
 
 出现此信息的时候，重启服务是成功的。
 
@@ -52,7 +52,4 @@ echo "fs.inotify.max_user_watches=262144" >> /etc/sysctl.conf
 sysctl -p
 ```
 
-#### `httpd -t` 报错 [so:warn] [pid 14645] AH01574: module ssl_module is already loaded
-
-检查 /etc/httpd/conf.modules.d/00-base.conf 和 /etc/httpd/conf.modules.d/00-ssl.conf 文件，注释其中一个mod_ssl
 
